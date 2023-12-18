@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add numbers</title>
+</head>
+<body>
+<h2>Add numbers:</h2>
+<form action="/add" method="POST">
+    <input type="number" name="a">
+    <input type="number" name="b">
+    <input type="submit" value="Add">
+</form>
+
+{% if summ %}
+<h2>Result: {{ summ }}</h2>
+{% endif %}
+
+</body>
+</html>
