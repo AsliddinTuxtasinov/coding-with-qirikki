@@ -8,7 +8,7 @@
 <h1>Maqolalarim</h1>
 
 {% for slug, article in articles.items() %}
-<a href="blog/{{slug}}">{{article}}</a> <br>
+<a href="blog/{{slug}}">{{article.title}}</a> <br>
 {% endfor %}
 
 </body>
