@@ -1,0 +1,5 @@
+Before we proceed, it is important to know what performance optimization is and what it isn’t.
+
+Performance optimization in Django involves improving the speed and efficiency of your Django web application to ensure
+that it can handle a large number of requests and provide a responsive user experience. It could include reducing the number
+of database queries, using efficient query techniques, caching, memory management, code profiling, and so on.

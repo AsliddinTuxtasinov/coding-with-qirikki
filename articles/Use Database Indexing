@@ -1,0 +1,7 @@
+Django is well-known as a web framework for building database-driven applications.
+This means that you would probably need to interact with your database a lot. When working with a large database,
+creating database indexes could help you retrieve data from your database faster.
+
+By default, databases use a sequential scan to fetch data from a database. This means that it would need to scan all
+the rows in the database to complete a query. The execution time may not be noticeable in relatively small databases,
+but for a huge database, it might be. Django provides us with a convenient method of creating indexes in our databases.

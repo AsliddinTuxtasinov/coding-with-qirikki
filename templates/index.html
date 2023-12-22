@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asilbro's Logs</title>
+</head>
+<body>
+<h1>Maqolalarim</h1>
+
+{% for slug, article in articles.items() %}
+<a href="blog/{{slug}}">{{article}}</a> <br>
+{% endfor %}
+
+</body>
+</html>
