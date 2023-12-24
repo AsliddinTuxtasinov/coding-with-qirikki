@@ -2,7 +2,8 @@
 
 # Define the name of your git commit message
 #GIT_COMMIT_MSG = "modified:   main/serializers.py (updated GetFilterNotificationCountSerializer serializer)"
-GIT_COMMIT_MSG = "3-updated: script like clean code"
+#GIT_COMMIT_MSG = "3-updated: script like clean code"
+GIT_COMMIT_MSG = "4-learning about cookies and session"
 
 # Command to push a commit to the repository
 push:
