@@ -1,6 +1,7 @@
-from flask import Flask, render_template, make_response, session, request
+from flask import Flask, render_template, make_response, session, request, redirect
 
 from article import Article
+from conf.utils import USERS, check_password
 
 app = Flask(__name__)
 
@@ -52,6 +53,30 @@ def blog_detail(slug: str):
         return f"Object not found"
 
     return render_template("article-detail.html", article=article)
+
+
+# Login section part one
+@app.get("/login")
+def login_page():
+    return render_template("login.html")
+
+
+# Login section part two
+@app.post("/login")
+def login():
+    username = request.form.get("username")
+    password = request.form.get("password")
+
+    if USERS.get(username) is None:
+        return render_template("login.html", errors="username or password is invalid !")
+
+    hash_password = USERS.get(username)
+    if check_password(hash_password=hash_password, password=password):
+        del session["user"]
+        session.setdefault("user", username)
+        return redirect(location="/learning-sessions")
+
+    return render_template("login.html", errors="username or password is invalid !")
 
 
 if __name__ == "__main__":
